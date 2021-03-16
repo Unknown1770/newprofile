@@ -5,6 +5,14 @@ from flask import Flask, request, render_template
 app = Flask(__name__) 
 
 # A decorator used to tell the application 
+<form action="{{ url_for("gfg")}}" method="post"> 
+<label for="firstname">First Name:</label> 
+<input type="text" id="firstname" name="fname" placeholder="firstname"> 
+<label for="lastname">Last Name:</label> 
+<input type="text" id="lastname" name="lname" placeholder="lastname"> 
+<button type="submit">Login</button> 
+
+
 # which URL is associated function 
 @app.route('/', methods =["GET", "POST"]) 
 def gfg(): 
